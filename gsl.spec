@@ -1,12 +1,12 @@
 Summary:	The GNU Scientific Library for numerical analysis
 Name:		gsl
-Version:	1.15
+Version:	1.16
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		Libraries
 Source0:	http://ftp.gnu.org/gnu/gsl/%{name}-%{version}.tar.gz
-# Source0-md5:	494ffefd90eef4ada678c306bab4030b
+# Source0-md5:	e49a664db13d81c968415cd53f62bc8b
 Patch0:		%{name}-link.patch
 URL:		http://www.gnu.org/software/gsl/
 BuildRequires:	autoconf
