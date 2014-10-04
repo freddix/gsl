@@ -1,7 +1,8 @@
+# based on PLD Linux spec git://git.pld-linux.org/packages/.git
 Summary:	The GNU Scientific Library for numerical analysis
 Name:		gsl
 Version:	1.16
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		Libraries
@@ -61,6 +62,8 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	m4datadir=%{_aclocaldir}
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -86,8 +89,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/gsl-config
 %attr(755,root,root) %{_libdir}/libgsl.so
 %attr(755,root,root) %{_libdir}/libgslcblas.so
-%{_libdir}/libgsl.la
-%{_libdir}/libgslcblas.la
 %{_includedir}/gsl
 %{_aclocaldir}/gsl.m4
 %{_pkgconfigdir}/gsl.pc
